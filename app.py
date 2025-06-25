@@ -21,4 +21,6 @@ grs = st.number_input("Jumlah Garasi (GRS)", min_value=0, value=1)
 if st.button("Prediksi Harga"):
     fitur = np.array([[lb, lt, kt, km, grs]])
     hasil_prediksi = model.predict(fitur)[0]
-    st.success(f"Perkiraan Harga Rumah: {hasil_prediksi:.2f} juta rupiah")
+    harga_rupiah = int(hasil_prediksi * 1_000_000)
+    formatted_harga = f"{harga_rupiah:,}".replace(",", ".")
+    st.success(f"Perkiraan Harga Rumah: Rp {formatted_harga}")
