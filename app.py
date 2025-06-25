@@ -6,7 +6,7 @@ import numpy as np
 model = joblib.load('xgb_model_tuned.pkl')
 
 # Judul aplikasi
-st.title("Prediksi Harga Rumah (dalam Juta Rupiah)")
+st.title("Prediksi Harga Rumah di Jakarta Selatan")
 
 st.markdown("Masukkan informasi rumah di bawah ini:")
 
